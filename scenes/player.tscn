@@ -1,19 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://d1ljyjcl6pb0t"]
 
 [ext_resource type="Texture2D" uid="uid://dtvnucpxnnhug" path="res://assets/sprites/knight.png" id="1_3vyb7"]
-
-[sub_resource type="CSharpScript" id="CSharpScript_3vyb7"]
-script/source = "using Godot;
-using System;
-
-public partial class Player : CharacterBody2D
-{
-	const speed = 300 
-	const jump_velocity = -400
-	
-	
-}
-"
+[ext_resource type="Script" uid="uid://ccib2oniq0clf" path="res://scripts/Player.cs" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2els"]
 atlas = ExtResource("1_3vyb7")
@@ -55,7 +43,7 @@ animations = [{
 radius = 5.0
 
 [node name="Player" type="CharacterBody2D"]
-script = SubResource("CSharpScript_3vyb7")
+script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -12)
